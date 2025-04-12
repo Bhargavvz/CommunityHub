@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Define animated gradient */
+@layer utilities {
+  .animated-gradient {
+    background-size: 200% 200%;
+    animation: gradient-animation 15s ease infinite;
+  }
+}
+
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body {
+  @apply bg-background text-text-primary antialiased;
+  font-family: 'Inter', system-ui, sans-serif; /* Example font, ensure it's loaded */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-heading text-primary;
+}

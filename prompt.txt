@@ -1,0 +1,170 @@
+🌐 Advanced Residential Community Website – Complete Development Prompt
+Objective:
+Develop a comprehensive, secure, and user-friendly website for a residential community to centralize communication, enhance transparency, and simplify day-to-day operations for both residents and management.
+
+🏗️ Core Modules & Features
+1. Homepage
+Hero section with community branding and welcome message
+
+Quick links to important sections (Notices, Events, Payments, etc.)
+
+Featured announcement or emergency notice
+
+Latest 3–5 updates or news cards
+
+Upcoming events slider
+
+Photo highlights
+
+2. Authentication & Role Management
+Secure resident/admin login & signup
+
+Email and mobile verification (OTP)
+
+Forgot password via email/OTP
+
+Roles: Super Admin, Admin, Resident, Watchman/Security
+
+3. Dashboard
+Resident Dashboard: Payments summary, active complaints, latest notices, event invites, personal profile
+
+Admin Dashboard: Resident overview, complaints dashboard, financial stats, document uploads, analytics
+
+4. News & Announcement Board
+Categorized: General, Emergency, Maintenance, Events, Security
+
+Push/email/WhatsApp notifications for residents
+
+Announcement archive with search
+
+5. Events & Activities
+Interactive calendar view
+
+RSVP with guest count
+
+Comment & photo upload option for post-event feedback
+
+Participation leaderboard (e.g., for fitness drives, contests)
+
+6. Maintenance & Payment Management
+Monthly/quarterly/annual payment plans
+
+Auto-reminders for due dates
+
+Online payment gateway (UPI/Stripe/Razorpay/PayPal)
+
+Admin side: export payment reports, send invoices
+
+Residents can download invoices/receipts
+
+7. Complaint Management System
+Residents file issues with category, urgency, optional image/video
+
+Track status: Pending → In Progress → Resolved → Feedback
+
+Admin assignment and escalation
+
+Feedback and rating system for service quality
+
+8. Resident Directory
+Flat-wise listing with filters (block, floor, occupancy status)
+
+Contact visibility control (opt-in privacy toggle)
+
+Message or notify resident option (admin only)
+
+9. Visitor & Security Management (Smart Society)
+Pre-approved visitors/passcodes
+
+Delivery tracking system
+
+Visitor log for security gate team (mobile/tablet interface)
+
+Vehicle entry log
+
+Emergency panic button
+
+10. Photo & Video Gallery
+Event-wise albums with filters
+
+Image upload with auto-compression
+
+Residents can upload (optional, admin approval needed)
+
+Videos from events embedded via YouTube/Vimeo
+
+11. Document Repository
+Categorized (Forms, Rules, Notices, Minutes of Meetings)
+
+View/download options
+
+Version control (e.g., bylaws v1.2)
+
+12. Polls & Surveys
+Create polls (e.g., pet policy, renovation plan)
+
+Anonymous or named responses
+
+Pie/bar chart results for transparency
+
+Voting expiry time
+
+13. Internal Messaging/Notifications
+One-to-one or broadcast messaging (admin → residents)
+
+In-app notifications with read status
+
+Optional email + WhatsApp integration
+
+14. Emergency Contacts Page
+Fire, police, ambulance, nearest hospital
+
+Committee members' emergency contact numbers
+
+Map with nearest essential services
+
+15. Notice Board PDF Generator
+Admin can generate printable notices from announcement text
+
+Auto-formatting to A4 PDF with community header
+
+16. Mobile App (Optional/Phase 2)
+PWA or hybrid mobile app for iOS/Android
+
+Push notifications
+
+Offline view of announcements/docs
+
+📊 Admin Analytics Dashboard
+Total residents, complaints, payments overview
+
+Charts for financial trends, participation, unresolved issues
+
+Downloadable reports (CSV/PDF)
+
+🔐 Security & Compliance
+Encrypted login (JWT/HTTPS)
+
+CAPTCHA for all public forms
+
+GDPR-like compliance (optional)
+
+Auto-logout after inactivity
+
+Secure admin panel
+
+💻 Recommended Tech Stack
+Frontend: React.js + TailwindCSS or Next.js
+
+Backend: Node.js + Express or Django
+
+Database: MongoDB / PostgreSQL
+
+Auth: JWT + 2FA
+
+File Storage: AWS S3 / Cloudinary
+
+Hosting: Vercel/Netlify (frontend) + Render/Railway (backend)
+
+Mobile App (optional): React Native or Flutter
+

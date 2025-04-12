@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"  # Frontend port
+      - "8000:8000"  # Backend API port
+    environment:
+      - NODE_ENV=production
+      # Add any additional environment variables here
+    volumes:
+      - ./backend/logs:/app/backend/logs
+    restart: unless-stopped 

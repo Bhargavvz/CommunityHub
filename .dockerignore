@@ -1,0 +1,39 @@
+# Node modules
+node_modules
+*/node_modules
+
+# Build directories
+dist
+build
+
+# Environment variables
+.env
+.env.*
+!.env.example
+backend/.env
+backend/.env.*
+!backend/.env.example
+
+# Git files
+.git
+.gitignore
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Docker files
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Editor directories and files
+.idea
+.vscode
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db 
