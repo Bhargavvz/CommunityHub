@@ -1,7 +1,7 @@
 // Example serverless API endpoint for Vercel
 
 import { initializeApp } from 'firebase/app';
-import { getFirestore } from 'firebase/firestore';
+import { getFirestore, collection, getDocs, doc, getDoc } from 'firebase/firestore';
 
 // Initialize Firebase (you'll need to set these in Vercel environment variables)
 const firebaseConfig = {
@@ -38,13 +38,44 @@ export default async function handler(req, res) {
   const path = pathname.substring(4); // Remove the /api prefix
   
   try {
-    // Example route handling
+    // Handle API routes
     if (req.method === 'GET') {
+      // Health check endpoint
       if (path === '/health') {
         return res.status(200).json({ status: 'OK', message: 'API is healthy' });
       }
       
-      // Add your other GET routes here
+      // Events endpoint
+      if (path === '/events') {
+        const eventsSnapshot = await getDocs(collection(db, 'events'));
+        const events = [];
+        eventsSnapshot.forEach(doc => {
+          events.push({ id: doc.id, ...doc.data() });
+        });
+        return res.status(200).json({ events });
+      }
+      
+      // Gallery endpoint
+      if (path === '/gallery') {
+        const gallerySnapshot = await getDocs(collection(db, 'gallery'));
+        const images = [];
+        gallerySnapshot.forEach(doc => {
+          images.push({ id: doc.id, ...doc.data() });
+        });
+        return res.status(200).json({ images });
+      }
+      
+      // Documents endpoint
+      if (path === '/documents') {
+        const documentsSnapshot = await getDocs(collection(db, 'documents'));
+        const documents = [];
+        documentsSnapshot.forEach(doc => {
+          documents.push({ id: doc.id, ...doc.data() });
+        });
+        return res.status(200).json({ documents });
+      }
+      
+      // Add more routes as needed
     }
     
     if (req.method === 'POST') {
@@ -56,6 +87,6 @@ export default async function handler(req, res) {
     
   } catch (error) {
     console.error('API error:', error);
-    return res.status(500).json({ error: 'Internal server error' });
+    return res.status(500).json({ error: 'Internal server error', details: error.message });
   }
 } 
